@@ -3,17 +3,17 @@ let status = 0;
 let floor, wall, cheese, ru1, ru2, rr1, rr2, rd1, rd2, rl1, rl2;
 
 function preload() {
-    floor = loadImage('../sprites/floor.png');
-    wall = loadImage('../sprites/wall.png');
-    cheese = loadImage('../sprites/cheese.png');
-    ru1 = loadImage('../sprites/up-1.png');
-    ru2 = loadImage('../sprites/up-2.png');
-    rr1 = loadImage('../sprites/right-1.png');
-    rr2 = loadImage('../sprites/right-2.png');
-    rd1 = loadImage('../sprites/down-1.png');
-    rd2 = loadImage('../sprites/down-2.png');
-    rl1 = loadImage('../sprites/left-1.png');
-    rl2 = loadImage('../sprites/left-2.png');
+    floor = loadImage('sprites/floor.png');
+    wall = loadImage('sprites/wall.png');
+    cheese = loadImage('sprites/cheese.png');
+    ru1 = loadImage('sprites/up-1.png');
+    ru2 = loadImage('sprites/up-2.png');
+    rr1 = loadImage('sprites/right-1.png');
+    rr2 = loadImage('sprites/right-2.png');
+    rd1 = loadImage('sprites/down-1.png');
+    rd2 = loadImage('sprites/down-2.png');
+    rl1 = loadImage('sprites/left-1.png');
+    rl2 = loadImage('sprites/left-2.png');
 }
 
 function grid() {
