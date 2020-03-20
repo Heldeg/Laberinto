@@ -30,11 +30,11 @@ function iniMap(){
     myMap.mapData();
     myMap.findAll();
     justify();
+    resizeCanvas(windWidht, windHeight);
 }
 function nextLevel(){
     indexLevel = (indexLevel+1)%maxLevel;
     iniMap();
-    resizeCanvas(windWidht, windHeight);
     redraw();
 }
 function isDisableButton(){
@@ -48,6 +48,8 @@ function isDisableButton(){
 }  
 function showMenu(){
     isMenu = true
+    menuDimensions();
+    resizeCanvas(windWidht, windHeight);
     loop();
 }
 
