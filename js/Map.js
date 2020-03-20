@@ -2,19 +2,37 @@
 //import Goal from './Goal.js'
 //import map1 from '../maps/map1.js'
 class Map {
-    constructor(newMap) {
-        this._map = newMap;
-        this._blockHeight = newMap.length;
-        this._blockWidht = newMap[0].length;
-        this.findAll(); //goal and player
+    constructor() {
+        /*
+        this.copyMap(newMap);
+        this.mapData();
+        this.findAll(); //goal and player*/
         this._isFinalized = false;
     }
+    copyMap(newMap){
+        this._map=[];
+        for(let i = 0; i< newMap.length; i++){
+            this._map[i]=[];
+            for (let j = 0; j < newMap[0].length;j++){
+                this._map[i][j] = newMap[i][j];
+            }
+        }
+    }
+    mapData(){
+        this._blockHeight = this._map.length;
+        this._blockWidht = this._map[0].length; 
+    }
     createPlayer(posX, posY) {
-        this._myPlayer = new Player(posX, posY);
+        this._myPlayer = new Player();
+        this._myPlayer._posX=posX;
+        this._myPlayer._posY=posY;
+        this._myPlayer._orientation = 0;
         this._map[this._myPlayer._posY][this._myPlayer._posX] = this._myPlayer.orientation;
     }
     createGoal(posX, posY) {
-        this._myGoal = new Goal(posX, posY);
+        this._myGoal = new Goal();
+        this._myGoal._posX = posX;
+        this._myGoal._posY = posY;
         this._map[this._myGoal._posY][this._myGoal._posX] = this._myGoal.symbol;
     }
     positionIsFree(posX, posY) {
@@ -60,7 +78,7 @@ class Map {
     }
     findAll() {
         for (let i = 0; i < this._blockHeight; i++) {
-            for (let j = 0; j < this._blockHeight; j++) {
+            for (let j = 0; j < this._blockWidht; j++) {
                 if (this._map[i][j] === '0') {
                     this.createPlayer(j, i);
                 }
@@ -81,6 +99,12 @@ class Map {
     }
     get blockHeight() {
         return this._blockHeight;
+    }
+    get player(){
+        return this._myPlayer;
+    }
+    get goal(){
+        return this._myGoal;
     }
 
 }

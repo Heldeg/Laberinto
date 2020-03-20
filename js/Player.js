@@ -1,8 +1,5 @@
 class Player{
-    constructor(posX, posY) {
-        this._posX = posX;
-        this._posY = posY;
-        this._orientation = 0;
+    constructor() {
         if (typeof Player.instance === 'object') {
             return Player.instance;
         }

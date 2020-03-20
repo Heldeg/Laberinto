@@ -1,7 +1,5 @@
 class Goal{
-    constructor(posX, posY) {
-        this._posX = posX;
-        this._posY = posY;
+    constructor() {
         this._symbol = '@';
         if (typeof Goal.instance === 'object') {
             return Goal.instance;

@@ -1,13 +1,13 @@
 let myMap;
 function setup(){
     //preload();
-    let canvas = createCanvas(640, 480);
+    iniMap();
+    let canvas = createCanvas(windWidht, windHeight);//640x480 800 x 600
     canvas.parent('sketch-holder');
-    myMap = new Map(map1);
-    frameRate(30);
     noLoop();
 }
 function draw(){
     background(200);
+    image(wallpaper,0,0,windWidht,windHeight);
     grid();
 }
