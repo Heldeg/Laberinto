@@ -1,4 +1,4 @@
-let blockSize; //20 /45
+let blockSize; //20 /45 /30
 let status = 0;
 let floor, wall, cheese, ru1, ru2, rr1, rr2, rd1, rd2, rl1, rl2;
 let windWidht;

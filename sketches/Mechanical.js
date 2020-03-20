@@ -30,7 +30,6 @@ function iniMap(){
     myMap.mapData();
     myMap.findAll();
     justify();
-    console.log(myMap.goal);
 }
 function nextLevel(){
     indexLevel = (indexLevel+1)%maxLevel;
@@ -41,14 +40,15 @@ function nextLevel(){
 function isDisableButton(){
     if((indexLevel+1) === maxLevel){
         $("#nextlevelButton").hide();
-        $("menuButton2").show();
+        $("#menuButton2").show();
     }else{
         $("#nextlevelButton").show();
         $("#menuButton2").hide();
     }
 }  
 function showMenu(){
-
+    isMenu = true
+    loop();
 }
 
 

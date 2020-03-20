@@ -1,12 +1,5 @@
-//import Player from './Player.js'
-//import Goal from './Goal.js'
-//import map1 from '../maps/map1.js'
 class Map {
     constructor() {
-        /*
-        this.copyMap(newMap);
-        this.mapData();
-        this.findAll(); //goal and player*/
         this._isFinalized = false;
     }
     copyMap(newMap){
@@ -119,6 +112,3 @@ function createEmptyMap(widht, height) {
     }
     return map;
 }
-//export default Map;
-/*const myMap = new Map(map1.map1);
-console.log(myMap);*/
